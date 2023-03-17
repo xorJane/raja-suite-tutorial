@@ -6,13 +6,13 @@ to your application.
 Like the previous lesson, we have a CMakeLists.txt file that will describe our
 application using the `blt_add_executable` macro.
 
-RAJA and Umpire are included in this project (look at tpl/CMakeLists.txt) and so
+RAJA and Umpire are included in this project (look at `tpl/CMakeLists.txt`) and so
 they exist as "targets" that we can tell CMake our application depends on.
 Additionally, since we have configured this project to use CUDA, BLT provides a
 `cuda` target to ensure that executables will be built with CUDA support.
 
 The `blt_add_executable` macro has another argument, `DEPENDS_ON`, that you can
-use to list dependendencies.
+use to specify dependendencies. Dependencies should be passed as a space-delimited list.
 
 ```
 blt_add_executable(
